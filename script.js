@@ -1,8 +1,25 @@
 document.getElementById("generarPDF").addEventListener("click", function () {
+    let selects = document.querySelectorAll("select");
+    let valid = true;
+
+    selects.forEach(select => {
+        if (select.value === "" || select.value.includes("Seleccione")) {
+            valid = false;
+            select.style.border = "2px solid red"; // Resalta en rojo los que no estén seleccionados
+        } else {
+            select.style.border = ""; // Quita el borde si ya está seleccionado
+        }
+    });
+
+    if (!valid) {
+        alert("❌ Debes seleccionar todas las opciones antes de descargar el PDF.");
+        return; // Sale de la función si faltan opciones
+    }
+
+    // Si todo está seleccionado, generar el PDF
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    // Agregar título
     doc.setFont("helvetica", "bold");
     doc.text("Hoja de Vida del PC", 70, 20);
 
@@ -31,6 +48,5 @@ document.getElementById("generarPDF").addEventListener("click", function () {
     doc.text(`Placa Base: ${placaBase}`, 20, y + 7 * espacio);
     doc.text(`Refrigeración: ${refrigeracion}`, 20, y + 8 * espacio);
 
-    // Guardar PDF sin imagen de fondo
     doc.save("hoja_de_vida_pc.pdf");
 });
