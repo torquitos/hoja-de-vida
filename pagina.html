@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida del PC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">Hoja de Vida del PC</h1>
+        <form id="pc-form">
+            <div class="space-y-4">
+                <label>Procesador:</label>
+                <select id="procesador" class="w-full p-2 rounded bg-gray-700">
+                    <option>Intel i3</option>
+                    <option>Intel i5</option>
+                    <option>Intel i7</option>
+                    <option>Intel i9</option>
+                    <option>Ryzen 3</option>
+                    <option>Ryzen 5</option>
+                    <option>Ryzen 7</option>
+                    <option>Ryzen 9</option>
+                </select>
+
+                <label>Memoria RAM:</label>
+                <select id="ram" class="w-full p-2 rounded bg-gray-700">
+                    <option>4GB</option>
+                    <option>8GB</option>
+                    <option>16GB</option>
+                    <option>32GB</option>
+                    <option>64GB</option>
+                </select>
+
+                <label>Almacenamiento:</label>
+                <select id="almacenamiento" class="w-full p-2 rounded bg-gray-700">
+                    <option>HDD 500GB</option>
+                    <option>HDD 1TB</option>
+                    <option>SSD 256GB</option>
+                    <option>SSD 512GB</option>
+                    <option>SSD 1TB</option>
+                </select>
+
+                <label>Numero de nucleos:</label>
+                <select id="nucleos" class="w-full p-2 rounded bg-gray-700">
+                    <option>2</option>
+                    <option>4</option>
+                    <option>8</option>
+                    <option>16</option>
+                    <option>32</option>
+                </select>
+
+                <label>Fuente de poder:</label>
+                <select id="poder" class="w-full p-2 rounded bg-gray-700">
+                    <option>400W sin certificación</option>
+                    <option>500W 80 Plus Bronze</option>
+                    <option>600W 80 Plus Silver</option>
+                    <option>650W 80 Plus Gold</option>
+                    <option>750W 80 Plus Platinum</option>
+                    <option>850W 80 Plus Titanium</option>
+                </select>
+
+                <label>Placa base:</label>
+                <select id="Placa" class="w-full p-2 rounded bg-gray-700">
+                    <option>A320M</option>
+                    <option>H510</option>
+                    <option>B450M</option>
+                    <option>B550-A Pro</option>
+                    <option>Z690</option>
+                    <option>X570 Aorus</option>
+                </select>
+
+                <label>refrigeracion:</label>
+                <select id="refrigeracion" class="w-full p-2 rounded bg-gray-700">
+                    <option>Stock</option>
+                    <option>Aire</option>
+                    <option>Líquida de 120 mm</option>
+                    <option>Líquida de 240 mm</option>
+                    <option>Líquida de 360 mm</option>
+                </select>
+
+                <button type="button" id="generarPDF" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    📄 Generar PDF
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
