@@ -5,18 +5,18 @@ document.getElementById("generarPDF").addEventListener("click", function () {
     selects.forEach(select => {
         if (select.value === "" || select.value.includes("Seleccione")) {
             valid = false;
-            select.style.border = "2px solid red"; // Resalta en rojo los que no estén seleccionados
+            select.style.border = "2px solid red"; 
         } else {
-            select.style.border = ""; // Quita el borde si ya está seleccionado
+            select.style.border = ""; 
         }
     });
 
     if (!valid) {
         alert("❌ Debes seleccionar todas las opciones antes de descargar el PDF.");
-        return; // Sale de la función si faltan opciones
+        return; 
     }
 
-    // Si todo está seleccionado, generar el PDF
+    // 
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
