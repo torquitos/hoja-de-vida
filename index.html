@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de Vida del PC</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilos -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Framework CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- Biblioteca para PDF -->
 </head>
 <body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
     <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
@@ -43,7 +43,25 @@
                     <option>SSD 1TB</option>
                 </select>
 
-                <label>Numero de nucleos:</label>
+                <label>Sistema Operativo:</label>
+                <select id="sistema_operativo" class="w-full p-2 rounded bg-gray-700">
+                    <option>Windows 10</option>
+                    <option>Windows 11</option>
+                    <option>Linux</option>
+                    <option>MacOS</option>
+                </select>
+
+                <label>Tarjeta Gráfica:</label>
+                <select id="tarjeta_grafica" class="w-full p-2 rounded bg-gray-700">
+                    <option>Integrada</option>
+                    <option>GTX 1650</option>
+                    <option>RTX 3060</option>
+                    <option>RTX 4070</option>
+                    <option>RX 6600</option>
+                    <option>RX 7900</option>
+                </select>
+
+                <label>Número de Núcleos:</label>
                 <select id="nucleos" class="w-full p-2 rounded bg-gray-700">
                     <option>2</option>
                     <option>4</option>
@@ -52,8 +70,8 @@
                     <option>32</option>
                 </select>
 
-                <label>Fuente de poder:</label>
-                <select id="poder" class="w-full p-2 rounded bg-gray-700">
+                <label>Fuente de Poder:</label>
+                <select id="fuente_poder" class="w-full p-2 rounded bg-gray-700">
                     <option>400W sin certificación</option>
                     <option>500W 80 Plus Bronze</option>
                     <option>600W 80 Plus Silver</option>
@@ -62,8 +80,8 @@
                     <option>850W 80 Plus Titanium</option>
                 </select>
 
-                <label>Placa base:</label>
-                <select id="Placa" class="w-full p-2 rounded bg-gray-700">
+                <label>Placa Base:</label>
+                <select id="placa_base" class="w-full p-2 rounded bg-gray-700">
                     <option>A320M</option>
                     <option>H510</option>
                     <option>B450M</option>
@@ -72,7 +90,7 @@
                     <option>X570 Aorus</option>
                 </select>
 
-                <label>refrigeracion:</label>
+                <label>Refrigeración:</label>
                 <select id="refrigeracion" class="w-full p-2 rounded bg-gray-700">
                     <option>Stock</option>
                     <option>Aire</option>
